@@ -6,23 +6,36 @@
 }
 .header {
   background-color: #2ecc71;
-  grid-column-start: 1;
-  grid-column-end: 5;
+  /* grid-column: 1 / 5; */
+  /*시작점 끝점 적는 대신엔 span으로 사용하면 똑같이 적용 된다.*/
+  /* grid-column: 1 / -1; */
+  grid-column: span 4;
+  /* grid-column-start: 1;
+  grid-column-end: 5; */
 }
 .content {
   background-color: #3498db;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  /* grid-column: 1 / 4; */
+  grid-column: 1 / -2;
+  /* grid-row: 2 / 4; */
+  grid-row: span 2;
+  /* grid-column-start: 1;
+  grid-column-end: 4; */
+  /* grid-row-start: 2;
+  grid-row-end: 4; */
 }
 .nav {
   background-color: #8e44ad;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  /* grid-row: 2 / 4; */
+  grid-row: span 2;
+  /* grid-row-start: 2;
+  grid-row-end: 4; */
 }
 .footer {
   background-color: #f39c12;
-  grid-column-start: 1;
-  grid-column-end: 5;
+  /* grid-column: 1 / 5; */
+  /* grid-column: 1 / -1; */
+  grid-column: span 4;
+  /* grid-column-start: 1;
+  grid-column-end: 5; */
 }
