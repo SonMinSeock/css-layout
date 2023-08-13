@@ -92,23 +92,33 @@ main {
             display: flex;
             flex-direction: column;
             width: 80%;                    
-            .movie__header {            
-                display: flex;      
-                flex-direction: column;
-                width: 100%;
+            .movie__header {                            
+                display: flex;                      
+                justify-content: space-between;       
+                align-items: flex-end;         
                 margin-bottom: 25px;
+                width: 100%;
+                position: relative;
                 h4 {
-                    font-size: 32px;
-                    text-transform: uppercase;
-                    margin-bottom: 1rem;
+                    font-size: 29px;                    
+                    text-transform: uppercase;                      
+                    &:hover::before {
+                        position: absolute;
+                        left: -55px;
+                        font-size: 1.5em;
+                        color: #831d16;
+                        opacity: .7;
+                        display: inline-block;
+                        content: "#";
+                    }           
                 }
                 h5 {
                     letter-spacing: 2px;
-                    font-size: 12px;
-                }                                              
+                    font-size: 5px;                                    
+                }                                                       
             }
             img {
-                width: 100%;
+                width: 100%;               
             }
         }
     }
@@ -132,9 +142,21 @@ main {
         }
         h3 {
             font-size: 18px;
-        }
+        }       
     }
     main {
         margin-left: 0;
+        .movie {
+            .wrapper {
+                .movie__header {
+
+                    h4 {                                
+                        &:hover::before {                
+                            left: -32px;            
+                        }           
+                    }
+                }
+            }
+        }
     }
 }
